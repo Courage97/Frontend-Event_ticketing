@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/* Import Tailwind base first */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Then import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Layer utilities for custom gradients */
+@layer utilities {
+  .bg-primary-gradient {
+    background: linear-gradient(to right, #3b82f6, #4f46e5);
+  }
+  .bg-secondary-gradient {
+    background: linear-gradient(to right, #8b5cf6, #6366f1);
+  }
+  .bg-subtle-gradient {
+    background: linear-gradient(to right, #f1f5f9, #e0e7ff);
+  }
+}
+
+/* Custom font family definitions - added for more explicit control */
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Montserrat', system-ui, sans-serif;
+  }
+}
